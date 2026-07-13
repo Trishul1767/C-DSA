@@ -28,6 +28,14 @@ void del_end(){
     struct Node *end,*endd;
     end=start;
     endd=start;
+    if (start==NULL){
+        printf("empty list\n");
+    }
+    if (start->next == NULL) {
+        free(start);
+        start = NULL;
+        return;
+}
     while(end->next!= NULL){
         end=end->next;
     }
@@ -57,6 +65,9 @@ int main(){
     while(1){
     printf("1.insert\n");
     printf("2.display\n");
+    printf("3.delete\n");
+    
+    
     scanf("%d",&choice);
     switch (choice){
         case 1:
