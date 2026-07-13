@@ -24,6 +24,21 @@ void insert_end(){
     temp->next=newnode;
 }
 
+void del_end(){
+    struct Node *end,*endd;
+    end=start;
+    endd=start;
+    while(end->next!= NULL){
+        end=end->next;
+    }
+    while(endd->next->next!=NULL){
+        endd=endd->next;
+    }
+    endd->next=NULL;
+    free(end);
+    
+}
+
 void display(){
     struct Node *tem;
     if (start==NULL){
@@ -49,6 +64,9 @@ int main(){
         break;
         case 2:
         display();
+        break;
+        case 3:
+        del_end();
         break;
     }
 }
