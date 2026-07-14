@@ -1,0 +1,33 @@
+void insert_middle() {
+    struct Node *newnode, *temp;
+    int pos, i;
+
+    newnode = malloc(sizeof(struct Node));
+
+    printf("Enter data: ");
+    scanf("%d", &newnode->data);
+
+    printf("Enter position after which to insert: ");
+    scanf("%d", &pos);
+
+    if (pos < 1) {
+        printf("Invalid position\n");
+        free(newnode);
+        return;
+    }
+
+    temp = start;
+
+    for (i = 1; i < pos && temp != NULL; i++) {
+        temp = temp->next;
+    }
+
+    if (temp == NULL) {
+        printf("Position does not exist\n");
+        free(newnode);
+        return;
+    }
+
+    newnode->next = temp->next;
+    temp->next = newnode;
+}
