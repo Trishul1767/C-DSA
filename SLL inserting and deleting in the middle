@@ -31,3 +31,20 @@ void insert_middle() {
     newnode->next = temp->next;
     temp->next = newnode;
 }
+
+
+
+
+void dis(){
+    struct Node *tem;
+    tem=start;
+    if(start==NULL){
+        printf("nill\n");
+        return;
+    }
+    while(tem!=NULL){
+        printf("%d -> ",tem->data);
+        tem=tem->next;
+    }
+    printf("NULL\n");
+}
