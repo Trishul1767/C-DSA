@@ -1,0 +1,117 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+struct Node{
+    int data;
+    struct Node *next;
+};
+struct Node *start=NULL;
+
+void insert_begin(){
+    struct Node *newnode;
+    newnode=(struct Node*)malloc(sizeof(struct Node));
+    
+    printf("enter data:\n");
+    scanf("%d",&newnode->data);
+    
+    newnode->next=start;
+    start=newnode;
+}
+
+void insert_end(){
+    struct Node *temp, *newnod;
+    newnod=(struct Node*)malloc(sizeof(struct Node));
+    
+    printf("enter data\n");
+    scanf("%d",&newnod->data);
+    newnod->next=NULL;
+    temp=start;
+    
+    if (start==NULL){
+        start=newnod;
+        return;
+    }
+    while(temp->next!=NULL){
+        temp=temp->next;
+    }
+    temp->next=newnod;
+}    
+void del_begin(){
+    struct Node *one;
+    if (start==NULL){
+        printf("nill\n");
+        return;
+    }
+    one=start;
+    start=one->next;
+    free(one);
+    
+}    
+void del_last(){
+    struct Node *end,*endd;
+    end=start;
+    endd=start;
+    if(start==NULL){
+        printf("nill\n");
+        return;
+    }
+    if(start->next==NULL){
+        free(start);
+        start=NULL;
+        return;
+    }
+    
+    while(end->next!=NULL){
+        end=end->next;
+    }
+    while(endd->next->next!=NULL){
+        endd=endd->next;
+    }
+    endd->next=NULL;
+    free(end);
+}
+void dis(){
+    struct Node *dis;
+    if(start==NULL){
+        printf("nuill\n");
+        return;
+    }
+    dis=start;
+    while(dis!=NULL){
+        printf("%d -> ",dis->data);
+        dis=dis->next;
+    }
+    printf("NULL\n");
+}
+int main(){
+    int a;
+    while(1){
+        printf("1.insert begin.\n");
+        printf("2.insert end.\n");
+        printf("3.del start.\n");
+        printf("4.del end.\n");
+        printf("5. dsplay\n");
+        scanf("%d",&a);
+        switch(a){
+            case 1:
+            insert_begin();
+            break;
+            case 2:
+            insert_end();
+            break;
+            case 3:
+            del_begin();
+            break;
+            case 4:
+            del_last();
+            break;
+            case 5:
+            dis();
+            break;
+        }
+    }
+}
+    
+    
+    
+    
