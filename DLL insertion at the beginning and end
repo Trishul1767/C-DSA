@@ -1,0 +1,84 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+struct Node{
+    int data;
+    struct Node *prev;
+    struct Node *next;
+};
+struct Node *start=NULL;
+
+void insert_begin(){
+    struct Node *newnode=malloc(sizeof(struct Node));
+    if(newnode==NULL){
+        printf("overflow");
+    }
+    printf("enter data\n");
+    scanf("%d",&newnode->data);
+    
+    newnode->next=start;
+    newnode->prev=NULL;
+    
+    if(start!=NULL){
+        start->prev=newnode;
+    }
+    start=newnode;
+}
+
+void insert_end(){
+    struct Node *temp,*newnod=malloc(sizeof(struct Node));
+    if(newnod==NULL){
+        printf("overflow\n");
+        return;
+    }
+    printf("enter data\n");
+    scanf("%d",&newnod->data);
+    
+    newnod->next=NULL;
+    newnod->prev=NULL;
+    temp=start;
+    
+    while(temp->next!=NULL){
+        temp=temp->next;
+    }
+    temp->next=newnod;
+    newnod->prev=temp;
+}
+void display(){
+    struct Node *tem=start;
+    if(start==NULL){
+        printf("nill\n");
+        return;
+    }
+    while(tem!=NULL){
+        printf("%d <-> ",tem->data);
+        tem=tem->next;
+    }
+    printf("NULL\n");
+}
+
+
+int main(){
+    int a;
+    while(1){
+        printf("1.insert at begin\n");
+        printf("2.insert at end\n");
+        printf("3.delete at begin\n");
+        printf("4.display\n");
+        scanf("%d",&a);
+        switch(a){
+            case 1:
+            insert_begin();
+            break;
+            case 2:
+            insert_end();
+            break;
+            case 3:
+            del_begin();
+            break;
+            case 4:
+            display();
+            break;
+        }
+    }
+}
