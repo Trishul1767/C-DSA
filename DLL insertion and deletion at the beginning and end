@@ -37,7 +37,11 @@ void insert_end(){
     newnod->next=NULL;
     newnod->prev=NULL;
     temp=start;
-    
+
+    if(start==NULL){
+        newnod=start;
+        return;
+    }
     while(temp->next!=NULL){
         temp=temp->next;
     }
