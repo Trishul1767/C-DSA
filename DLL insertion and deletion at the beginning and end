@@ -40,7 +40,7 @@ void insert_end(){
     temp=start;
 
     if(start==NULL){
-        newnod=start;
+        start=newnode;
         return;
     }
     while(temp->next!=NULL){
