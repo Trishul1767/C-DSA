@@ -49,7 +49,7 @@ void insert_end(){
 }
 
 void del_start(){
-    struct Node *tem,*del;
+    struct Node *tem;
     if(start==NULL){
         printf("nill\n");
         return;
