@@ -109,3 +109,29 @@ void del_begin(){
 
     free(temp);
 }
+
+void del_end(){
+
+    struct Node *temp;
+
+    if(start == NULL){
+        printf("List is empty\n");
+        return;
+    }
+
+    if(start->next == start){
+        free(start);
+        start = NULL;
+        return;
+    }
+
+    temp = start;
+
+    while(temp->next->next != start){
+        temp = temp->next;
+    }
+
+    free(temp->next);
+
+    temp->next = start;
+}
