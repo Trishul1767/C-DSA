@@ -29,3 +29,34 @@ void insert_begin() {
     last->next = newnode;
     start = newnode;
 }
+
+void insert_end() {
+
+    struct Node *newnode, *last;
+
+    newnode = (struct Node*)malloc(sizeof(struct Node));
+
+    if(newnode == NULL){
+        printf("Overflow\n");
+        return;
+    }
+
+    printf("Enter data:\n");
+    scanf("%d", &newnode->data);
+
+    // Empty list
+    if(start == NULL){
+        start = newnode;
+        newnode->next = start;
+        return;
+    }
+
+    last = start;
+
+    while(last->next != start){
+        last = last->next;
+    }
+
+    last->next = newnode;
+    newnode->next = start;
+}
