@@ -60,3 +60,22 @@ void insert_end() {
     last->next = newnode;
     newnode->next = start;
 }
+
+void display() {
+
+    struct Node *temp;
+
+    if(start == NULL){
+        printf("List is empty\n");
+        return;
+    }
+
+    temp = start;
+
+    do{
+        printf("%d -> ", temp->data);
+        temp = temp->next;
+    }while(temp != start);
+
+    printf("(back to start)\n");
+}
