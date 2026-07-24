@@ -13,3 +13,18 @@ int main() {
   
   return 0;
 }
+
+Why is it important to know?
+
+If you create a program that occupies too much, or unnecessary memory, it can result in slow and poor performance.
+
+In C, you have to manage memory yourself. It is a complicated task, but is also quite powerful when used correctly: Properly managing the computer memory optimizes the performance of the program, so it is useful that you know how to release memory when it is no longer required and only use as little as necessary for the task.
+
+In previous chapters you learned about memory addresses and pointers.
+
+Both have an importance when it comes to memory management, since it is possible to work directly with memory through pointers.
+
+But be careful; pointers must be handled with care, since it is possible to damage data stored in other memory addresses.
+
+Memory Management
+Memory management is the process of handling how much memory a program uses through allocation, reallocation and deallocation (often referred to as "freeing"). 
