@@ -1,0 +1,45 @@
+struct Node{
+    int data;
+    struct Node *next;
+};
+struct Node *start=NULL;
+
+void insert(){
+    struct Node *temp,*newnode=malloc(sizeof(struct Node));
+    if(newnode==NULL){
+        printf("overflow\n");
+        return;
+    }
+    temp=start;
+    int i,pos;
+    printf("enter data\n");
+    scanf("%d",&newnode->data);
+    printf("enter the pos:\n");
+    scanf("%d",&pos);
+    if(pos == 1){
+        newnode->next=start;
+        start=newnode;
+        return;
+    }
+    for(i=1,i<pos-1;i++){
+        temp=temp->next;
+    }
+    newnode->next=temp->next;
+    temp->next=newnode;
+}
+void del(){
+    struct Node *del;
+    del=start;
+    if(start==NULL){
+        printf("empty\n");
+        return;
+    }
+    int i,pos;
+    printf("enter the pos:\n");
+    scanf("%d",&pos);
+    for(i=0;i<pos-1;i++){
+        del=del->next;
+    }
+    
+    free(del);
+}
