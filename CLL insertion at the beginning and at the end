@@ -111,6 +111,10 @@ void del_end(){
     while(temp->next->next != start){
         temp = temp->next;
     }
+        free(temp->next);
+
+        temp->next = start;
+}
 
 void display() {
 
@@ -126,13 +130,7 @@ void display() {
     do{
         printf("%d -> ", temp->data);
         temp = temp->next;
-    }while(temp != start);
-
-    printf("(back to start)\n");
-}
+    }
 
 
-    free(temp->next);
 
-    temp->next = start;
-}
