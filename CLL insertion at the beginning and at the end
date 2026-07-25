@@ -130,7 +130,38 @@ void display() {
     do{
         printf("%d -> ", temp->data);
         temp = temp->next;
+    }while(dis!=start);
+    printf("Back to start.\n");
+}
+
+int main(){
+    int a;
+    while(1){
+        printf("1.insert begin.\n");
+        printf("2.insert end.\n");
+        printf("3.del start.\n");
+        printf("4.del end.\n");
+        printf("5. dsplay\n");
+        scanf("%d",&a);
+        switch(a){
+            case 1:
+            insert_begin();
+            break;
+            case 2:
+            insert_end();
+            break;
+            case 3:
+            del_begin();
+            break;
+            case 4:
+            del_end();
+            break;
+            case 5:
+            dis();
+            break;
+        }
     }
+}
 
 
 
