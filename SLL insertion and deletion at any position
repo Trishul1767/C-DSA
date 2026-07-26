@@ -28,7 +28,7 @@ void insert(){
     temp->next=newnode;
 }
 void del(){
-    struct Node *del;
+    struct Node *del,*delete;
     del=start;
     if(start==NULL){
         printf("empty\n");
@@ -40,6 +40,7 @@ void del(){
     for(i=0;i<pos-1;i++){
         del=del->next;
     }
-    
+    delete=del->next;
+    del->next=delete->next;
     free(del);
 }
