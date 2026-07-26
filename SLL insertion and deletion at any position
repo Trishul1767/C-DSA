@@ -21,7 +21,7 @@ void insert(){
         start=newnode;
         return;
     }
-    for(i=1,i<pos-1;i++){
+    for(i=1;i<pos-1;i++){
         temp=temp->next;
     }
     newnode->next=temp->next;
