@@ -21,3 +21,18 @@ scanf("%d",%data);
 top++;
 stack[top]=data;
 }
+
+void pop()
+{
+    if(top == -1)
+    {
+        printf("Stack Underflow\n");
+        return;
+    }
+
+    int item = stack[top];
+
+    top--;
+
+    printf("%d deleted\n", item);
+}
