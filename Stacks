@@ -1,0 +1,7 @@
+#define MAX 5     // Maximum capacity
+
+int stack[MAX];   // Storage for elements
+
+int top = -1;     // Index of the current top element
+
+the 1st line is Before your program is even compiled, the preprocessor replaces every occurrence of MAX with 5.
