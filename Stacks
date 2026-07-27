@@ -11,8 +11,13 @@ the 1st line is Before your program is even compiled, the preprocessor replaces 
 int stack[MAX];
 int top=-1;
 void push(){
-  int a;
+  int data;
   if(top==MAX-1){
   printf("overflow\n");
   return;
+}
+printf("enter data\n");
+scanf("%d",%data);
+top++;
+stack[top]=data;
 }
