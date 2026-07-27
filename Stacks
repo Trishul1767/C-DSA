@@ -10,3 +10,9 @@ the 1st line is Before your program is even compiled, the preprocessor replaces 
 #define MAX 5
 int stack[MAX];
 int top=-1;
+void push(){
+  int a;
+  if(top==MAX-1){
+  printf("overflow\n");
+  return;
+}
