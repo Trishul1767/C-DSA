@@ -3,6 +3,7 @@
 #define MAX 5
 int stack[MAX];
 int top=-1;
+
 void push(){
   int data;
   if(top==MAX-1){
@@ -41,6 +42,7 @@ void dis(){
     }
     printf("\n");
 }
+
 void peek(){
     int a;
     if(top==-1){
@@ -50,6 +52,7 @@ void peek(){
     a=stack[top];
     printf("%d\n",a);
 }
+
 int main(){
     int a;
     while(1){
