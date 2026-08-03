@@ -23,3 +23,25 @@ void enqueue(int value)
         queue[rear] = value;
     }
 }
+
+void dequeue()
+{
+    if (front == -1)
+    {
+        printf("Queue Underflow\n");
+    }
+    else
+    {
+        printf("Deleted: %d\n", queue[front]);
+
+        if (front == rear)
+        {
+            front = -1;
+            rear = -1;
+        }
+        else
+        {
+            front++;
+        }
+    }
+}
