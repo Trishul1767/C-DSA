@@ -1,0 +1,15 @@
+void enqueue(int value)
+{
+    if (rear == SIZE - 1)
+    {
+        printf("Queue Overflow\n");
+    }
+    else
+    {
+        if (front == -1)
+            front = 0;
+
+        rear++;
+        queue[rear] = value;
+    }
+}
