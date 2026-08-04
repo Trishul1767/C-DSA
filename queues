@@ -26,6 +26,19 @@ void enqueue(int value)
 
 void dequeue()
 {
+
+
+void peek()
+{
+    if (front == -1)
+    {
+        printf("Queue Empty\n");
+    }
+    else
+    {
+        printf("Front Element = %d\n", queue[front]);
+    }
+}
     if (front == -1)
     {
         printf("Queue Underflow\n");
