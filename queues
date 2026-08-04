@@ -61,3 +61,18 @@ void peek()
 
 
 // display function
+void display()
+{
+    if (front == -1)
+    {
+        printf("Queue Empty\n");
+    }
+    else
+    {
+        for (int i = front; i <= rear; i++)
+        {
+            printf("%d ", queue[i]);
+        }
+        printf("\n");
+    }
+}
