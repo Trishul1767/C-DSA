@@ -27,7 +27,7 @@ void enqueue(int value)
 void dequeue()
 {
 
-
+// peek function
 void peek()
 {
     if (front == -1)
