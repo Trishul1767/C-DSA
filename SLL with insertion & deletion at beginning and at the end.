@@ -36,6 +36,7 @@ void insert_end(){
     }
     temp->next=newnod;
 }    
+
 void del_begin(){
     struct Node *one;
     if (start==NULL){
@@ -70,6 +71,7 @@ void del_last(){
     endd->next=NULL;
     free(end);
 }
+
 void dis(){
     struct Node *dis;
     if(start==NULL){
