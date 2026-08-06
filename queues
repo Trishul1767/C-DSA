@@ -24,8 +24,6 @@ void enqueue(int value)
     }
 }
 
-void dequeue()
-{
 
 // peek function
 void peek()
