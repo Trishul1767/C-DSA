@@ -39,6 +39,8 @@ void peek()
         printf("Front Element = %d\n", queue[front]);
     }
 }
+void dequeue()
+{
     if (front == -1)
     {
         printf("Queue Underflow\n");
