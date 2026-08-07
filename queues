@@ -4,17 +4,12 @@
 #define MAX 3
 int f=-1;
 int r=-1;
-int queue[MAX];#include <stdio.h>
+int queue[MAX];
 
-#define SIZE 5
-
-int queue[SIZE];
-int front = -1;
-int rear = -1;
 //inserting at the end 
 //incrementing the rear every insertion and front if front is -1
-
 // don't forget to increment the front if the queue is empty
+
 #include<stdio.h>
 #include<stdlib.h>
 #define MAX 3
