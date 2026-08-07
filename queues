@@ -9,72 +9,116 @@ int rear = -1;
 //incrementing the rear every insertion and front if front is -1
 
 // don't forget to increment the front if the queue is empty
-void enqueue(int value)
-{
-    if (rear == SIZE - 1)
-    {
-        printf("Queue Overflow\n");
-    }
-    else
-    {
-        if (front == -1)
-            front = 0;
+#include<stdio.h>
+#include<stdlib.h>
+#define MAX 3
+int f=-1;
+int r=-1;
+int queue[MAX];
 
-        rear++;
-        queue[rear] = value;
+void enqueue(){
+    int data;
+    if(r==MAX-1){
+        printf("overflow\n");
+        return;
     }
+    if(f==-1){
+        f++;
+    }
+    printf("enter data\n");
+    scanf("%d",&data);
+    r++;
+    queue[r]=data;
 }
-
-
-// peek function
-void peek()
-{
-    if (front == -1)
-    {
-        printf("Queue Empty\n");
+void dequeue(){
+    if(f==-1){
+        printf("underflow\n");
+        return;
     }
-    else
-    {
-        printf("Front Element = %d\n", queue[front]);
-    }
-}
-
-void dequeue()
-{
-    if (front == -1)
-    {
-        printf("Queue Underflow\n");
-    }
-    else
-    {
-        printf("Deleted: %d\n", queue[front]);
-
-        if (front == rear)
-        {
-            front = -1;
-            rear = -1;
+    else{
+        printf("%d has been removed\n",queue[f]);
+        if(r==f){
+            f=-1;
+            r=-1;
         }
-        else
-        {
-            front++;
+        else{
+            f++;
         }
     }
 }
-
-
-// display function
-void display()
-{
-    if (front == -1)
-    {
-        printf("Queue Empty\n");
+void display(){
+    int i;
+    if(f==-1){
+        printf("empty\n");
+        return;
     }
-    else
-    {
-        for (int i = front; i <= rear; i++)
-        {
-            printf("%d ", queue[i]);
-        }
-        printf("\n");
+    printf("Queue: ");
+    for(i=f;i<=r;i++){
+        printf("%d ",queue[i]);
     }
+    printf("\n");
 }
+
+void peek(){
+    if(f==-1){
+        printf("empty\n");
+        return;
+    }
+    printf("Front element is %d",queue[f]);
+}
+int main(){
+
+    while(1){
+
+        printf("1.insert\n");
+
+        printf("2.delete\n");
+
+        printf("3.peek\n");
+
+        printf("4.display\n");
+
+        printf("5.exit\n");
+
+        int b;
+
+        scanf("%d",&b);
+
+        switch(b){
+
+            case 1:
+
+                enqueue();
+
+                break;
+
+            case 2:
+
+            dequeue();
+
+            break;
+
+            case 3:
+
+            peek();
+
+            break;
+
+            case 4:
+
+            display();
+
+            break;
+
+            case 5:
+
+            exit(0);
+            default:
+            printf("enter valid choice!\n");
+
+        }
+
+    }
+
+} 
+
