@@ -10,12 +10,6 @@ int queue[MAX];
 //incrementing the rear every insertion and front if front is -1
 // don't forget to increment the front if the queue is empty
 
-#include<stdio.h>
-#include<stdlib.h>
-#define MAX 3
-int f=-1;
-int r=-1;
-int queue[MAX];
 
 void enqueue(){
     int data;
