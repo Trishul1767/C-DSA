@@ -1,4 +1,10 @@
-#include <stdio.h>
+
+#include<stdio.h>
+#include<stdlib.h>
+#define MAX 3
+int f=-1;
+int r=-1;
+int queue[MAX];#include <stdio.h>
 
 #define SIZE 5
 
