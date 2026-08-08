@@ -7,6 +7,7 @@ int r=-1;
 int queue[MAX];
 
 //inserting at the end 
+//deleting at the front
 //incrementing the rear every insertion and front if front is -1
 // don't forget to increment the front if the queue is empty
 
