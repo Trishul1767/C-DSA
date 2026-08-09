@@ -1,0 +1,25 @@
+void enqueue()
+{
+    int data;
+
+    if ((r + 1) % MAX == f)
+    {
+        printf("Overflow\n");
+        return;
+    }
+
+    printf("Enter data: ");
+    scanf("%d", &data);
+
+    if (f == -1)
+    {
+        f = 0;
+        r = 0;
+    }
+    else
+    {
+        r = (r + 1) % MAX;
+    }
+
+    queue[r] = data;
+}
