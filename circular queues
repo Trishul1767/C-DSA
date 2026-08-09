@@ -23,3 +23,24 @@ void enqueue()
 
     queue[r] = data;
 }
+
+void dequeue()
+{
+    if (f == -1)
+    {
+        printf("Underflow\n");
+        return;
+    }
+
+    printf("%d has been removed\n", queue[f]);
+
+    if (f == r)
+    {
+        f = -1;
+        r = -1;
+    }
+    else
+    {
+        f = (f + 1) % MAX;
+    }
+}
