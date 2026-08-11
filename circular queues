@@ -1,4 +1,11 @@
-#include<stdio.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+#define MAX 5
+
+int queue[MAX];
+int f = -1;
+int r = -1;
 
 void enqueue()
 {
@@ -45,4 +52,42 @@ void dequeue()
     {
         f = (f + 1) % MAX;
     }
+}
+
+void display()
+{
+    int i;
+
+    if (f == -1)
+    {
+        printf("Empty\n");
+        return;
+    }
+
+    printf("Queue: ");
+
+    i = f;
+
+    while (1)
+    {
+        printf("%d ", queue[i]);
+
+        if (i == r)
+            break;
+
+        i = (i + 1) % MAX;
+    }
+
+    printf("\n");
+}
+
+void peek()
+{
+    if (f == -1)
+    {
+        printf("Empty\n");
+        return;
+    }
+
+    printf("Front element: %d\n", queue[f]);
 }
