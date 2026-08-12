@@ -122,8 +122,41 @@ int main(){
 }
     
     
-    
-    
+void insertAfterPosition(int pos) {
+    int data;
+    struct node *temp = head;
+    struct node *newnode;
+
+    printf("Enter data: ");
+    scanf("%d", &data);
+
+    if (head == NULL) {
+        printf("List is empty\n");
+        return;
+    }
+
+    // Move temp to the required position
+    for (int i = 1; i < pos; i++) {
+        if (temp->next == NULL) {
+            printf("Position does not exist\n");
+            return;
+        }
+        temp = temp->next;
+    }
+
+    newnode = (struct node *)malloc(sizeof(struct node));
+
+    newnode->data = data;
+
+    newnode->next = temp->next;
+    newnode->prev = temp;
+
+    if (temp->next != NULL) {
+        temp->next->prev = newnode;
+    }
+
+    temp->next = newnode;
+}
 
 
 
