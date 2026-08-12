@@ -159,5 +159,36 @@ void insertAfterPosition(int pos) {
 }
 
 
+void deleteAfterPosition(int pos) {
+    struct node *temp = head;
+    struct node *del;
 
+    if (head == NULL) {
+        printf("List is empty\n");
+        return;
+    }
+
+    for (int i = 1; i < pos; i++) {
+        if (temp->next == NULL) {
+            printf("Position does not exist\n");
+            return;
+        }
+        temp = temp->next;
+    }
+
+    if (temp->next == NULL) {
+        printf("No node exists after this position\n");
+        return;
+    }
+
+    del = temp->next;
+
+    temp->next = del->next;
+
+    if (del->next != NULL) {
+        del->next->prev = temp;
+    }
+
+    free(del);
+}
 
