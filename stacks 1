@@ -30,6 +30,7 @@ void pop()
 
     printf("element %d has been deleted\n", item);
 }
+
 void dis(){
     int i;
     if(top==-1){
