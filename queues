@@ -26,6 +26,7 @@ void enqueue(){
     r++;
     queue[r]=data;
 }
+
 void dequeue(){
     if(f==-1){
         printf("underflow\n");
@@ -42,6 +43,7 @@ void dequeue(){
         }
     }
 }
+
 void display(){
     int i;
     if(f==-1){
