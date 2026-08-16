@@ -42,5 +42,5 @@ void del(){
     }
     delete=del->next;
     del->next=delete->next;
-    free(del);
+    free(delete);
 }
