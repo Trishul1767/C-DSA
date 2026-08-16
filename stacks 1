@@ -25,9 +25,7 @@ void pop()
     }
 
     int item = stack[top];
-
     top--;
-
     printf("element %d has been deleted\n", item);
 }
 
