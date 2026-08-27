@@ -93,7 +93,7 @@ void del_end(){
     struct Node *temp;
 
     if(start == NULL){
-        printf("List is empty\n");
+        printf("Underflow\n");
         return;
     }
 
