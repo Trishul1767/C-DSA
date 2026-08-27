@@ -93,7 +93,7 @@ void del_end(){
     struct Node *temp;
 
     if(start == NULL){
-        printf("Underflow\n");
+        printf("Underflow.\n");
         return;
     }
 
