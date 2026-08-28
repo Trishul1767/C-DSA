@@ -47,3 +47,55 @@ void insert_pos(){
     newnode->next = temp->next;
     temp->next = newnode;
 }
+
+
+
+void del_pos(){
+
+    struct Node *temp, *del, *last;
+    int pos, i;
+
+    if(start == NULL){
+        printf("List is empty\n");
+        return;
+    }
+
+    printf("Enter position: ");
+    scanf("%d", &pos);
+
+    // Delete first node
+    if(pos == 1){
+
+        // Only one node
+        if(start->next == start){
+            free(start);
+            start = NULL;
+            return;
+        }
+
+        last = start;
+
+        while(last->next != start){
+            last = last->next;
+        }
+
+        del = start;
+        start = start->next;
+        last->next = start;
+
+        free(del);
+        return;
+    }
+
+    temp = start;
+
+    for(i = 1; i < pos - 1; i++){
+        temp = temp->next;
+    }
+
+    del = temp->next;
+
+    temp->next = del->next;
+
+    free(del);
+}
