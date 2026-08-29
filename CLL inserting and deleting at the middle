@@ -48,7 +48,7 @@ void insert_pos(){
     temp->next = newnode;
 }
 
-//deleting after a node
+//deleting a node after the position
 
 void del_pos(){
 
