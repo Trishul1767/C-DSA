@@ -161,4 +161,53 @@ int main(){
 
 //insertion at the middle
 
+void insert_pos(){
+
+    struct Node *newnode, *temp, *last;
+    int pos, i;
+
+    newnode = (struct Node*)malloc(sizeof(struct Node));
+
+    if(newnode == NULL){
+        printf("Overflow\n");
+        return;
+    }
+
+    printf("Enter data: ");
+    scanf("%d", &newnode->data);
+
+    printf("Enter position: ");
+    scanf("%d", &pos);
+
+    // Insert at beginning
+    if(pos == 1){
+
+        if(start == NULL){
+            start = newnode;
+            newnode->next = start;
+            return;
+        }
+
+        last = start;
+
+        while(last->next != start){
+            last = last->next;
+        }
+
+        newnode->next = start;
+        start = newnode;
+        last->next = start;
+
+        return;
+    }
+
+    temp = start;
+
+    for(i = 1; i < pos - 1; i++){
+        temp = temp->next;
+    }
+
+    newnode->next = temp->next;
+    temp->next = newnode;
+}
 
