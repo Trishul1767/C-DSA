@@ -159,7 +159,7 @@ int main(){
     }
 }
 
-//insertion at the middle
+//insertion at the middle after the position
 
 void insert_pos(){
 
