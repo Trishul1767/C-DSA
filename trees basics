@@ -1,4 +1,5 @@
 //Creating a node
+
 struct Node* createNode(int data) {
     struct Node *newNode;
 
