@@ -12,7 +12,7 @@ struct Node* createNode(int data) {
     return newNode;
 }
 
-// Tree
+// Tree implementation
 struct Node *root = createNode(10);
 
 root->left = createNode(20);
