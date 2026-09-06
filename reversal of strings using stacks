@@ -8,7 +8,7 @@ int main() {
     char stack[600];
     int i;
     scanf("%s",a);
-    for(i=0;a[i]!='\0';i++){
+    for(i=0;a[i]!='\0';i++){ //'\0' is for the end of the list
         top++;
         stack[top]=a[i];
     }
