@@ -52,7 +52,7 @@ void insert_end(){
 void del_start(){
     struct Node *tem;
     if(start==NULL){
-        printf("nill\n");
+        printf("Empty List.\n");
         return;
     }
     tem=start;
