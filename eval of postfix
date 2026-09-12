@@ -1,1 +1,78 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
 
+#define MAX 50
+
+int stack[MAX];
+int top = -1;
+
+// Push function modified to take data as a parameter
+void push(int data) {
+    if (top == MAX - 1) {
+        printf("Stack Overflow\n");
+        exit(1);
+    }
+    top++;
+    stack[top] = data;
+}
+
+// Pop function modified to return the popped value
+int pop() {
+    if (top == -1) {
+        printf("Stack Underflow / Invalid Expression\n");
+        exit(1);
+    }
+    int item = stack[top];
+    top--;
+    return item;
+}
+
+// Function to evaluate the postfix expression
+int evaluatePostfix(char exp[]) {
+    int i = 0;
+    char ch;
+    int val1, val2, result;
+
+    while (exp[i] != '\0') {
+        ch = exp[i];
+
+        // If character is a digit, push its integer value to stack
+        if (isdigit(ch)) {
+            push(ch - '0'); // Converts char digit '5' to int 5
+        }
+        // If character is an operator
+        else if (ch == '+' || ch == '-' || ch == '*' || ch == '/') {
+            val2 = pop(); // First popped is right operand
+            val1 = pop(); // Second popped is left operand
+
+            switch (ch) {
+                case '+': result = val1 + val2; break;
+                case '-': result = val1 - val2; break;
+                case '*': result = val1 * val2; break;
+                case '/': 
+                    if (val2 == 0) {
+                        printf("Error: Division by zero\n");
+                        exit(1);
+                    }
+                    result = val1 / val2; 
+                    break;
+            }
+            push(result);
+        }
+        i++;
+    }
+    return pop(); // Final result is the last element in stack
+}
+
+int main() {
+    char exp[MAX];
+
+    printf("Enter a single-digit postfix expression (e.g., 53+82-*): ");
+    scanf("%s", exp);
+
+    int output = evaluatePostfix(exp);
+    printf("Result of evaluation: %d\n", output);
+
+    return 0;
+}
