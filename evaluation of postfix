@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-#define MAX 50
+#define MAX 20
 
 int stack[MAX];
 int top = -1;
