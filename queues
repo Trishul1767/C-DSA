@@ -59,7 +59,7 @@ void display(){
 
 void peek(){
     if(f==-1){
-        printf("empty\n");
+        printf("The queue is empty\n");
         return;
     }
     printf("Front element is %d",queue[f]);
