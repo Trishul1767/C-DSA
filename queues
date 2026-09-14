@@ -15,7 +15,7 @@ int queue[MAX];
 void enqueue(){
     int data;
     if(r==MAX-1){
-        printf("overflow\n");
+        printf("Overflow\n");
         return;
     }
     if(f==-1){
@@ -29,7 +29,7 @@ void enqueue(){
 
 void dequeue(){
     if(f==-1){
-        printf("underflow\n");
+        printf("Underflow\n");
         return;
     }
     else{
