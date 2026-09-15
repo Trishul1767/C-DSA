@@ -4,7 +4,7 @@ struct Node{
 };
 struct Node *start=NULL;
 
-void insert(){
+void insert_at_pos(){
     struct Node *temp,*newnode=malloc(sizeof(struct Node));
     if(newnode==NULL){
         printf("overflow\n");
