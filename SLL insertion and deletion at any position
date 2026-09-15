@@ -27,7 +27,7 @@ void insert_at_pos(){
     newnode->next=temp->next;
     temp->next=newnode;
 }
-void del(){
+void del_at_Pos(){
     struct Node *del,*delete;
     del=start;
     if(start==NULL){
