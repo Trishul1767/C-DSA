@@ -10,8 +10,9 @@ struct Node *start=NULL;
 void insert_begin(){
     struct Node *newnode;
     newnode=(struct Node*)malloc(sizeof(struct Node));
+
     if(newnode==NULL){
-        printf("Overflow");
+        printf("Overflow.");
         return;
     }
     
@@ -25,8 +26,9 @@ void insert_begin(){
 void insert_end(){
     struct Node *temp, *newnod;
     newnod=(struct Node*)malloc(sizeof(struct Node));
+
     if(newnode==NULL){
-        printf("Overflow");
+        printf("Overflow.");
         return;
     }
     
