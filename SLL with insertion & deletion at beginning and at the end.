@@ -12,6 +12,7 @@ void insert_begin(){
     newnode=(struct Node*)malloc(sizeof(struct Node));
     if(newnode==NULL){
         printf("Overflow");
+        return;
     }
     
     printf("enter data:\n");
