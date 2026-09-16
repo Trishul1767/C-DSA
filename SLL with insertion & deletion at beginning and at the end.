@@ -53,6 +53,11 @@ void del_begin(){
         printf("nill\n");
         return;
     }
+    if(start->next==NULL){
+        free(start);
+        start=NULL;
+        return;
+    }
     one=start;
     start=one->next;
     free(one);
