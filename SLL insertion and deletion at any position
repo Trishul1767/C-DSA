@@ -1,46 +1,98 @@
-struct Node{
+struct Node {
     int data;
     struct Node *next;
 };
-struct Node *start=NULL;
 
-void insert_at_pos(){
-    struct Node *temp,*newnode=malloc(sizeof(struct Node));
-    if(newnode==NULL){
+struct Node *start = NULL;
+
+void insert_at_pos() {
+    struct Node *temp, *newnode = malloc(sizeof(struct Node));
+
+    if (newnode == NULL) {
         printf("overflow\n");
         return;
     }
-    temp=start;
-    int i,pos;
+
+    int i, pos, count = 0;
+
     printf("enter data\n");
-    scanf("%d",&newnode->data);
+    scanf("%d", &newnode->data);
+
     printf("enter the pos:\n");
-    scanf("%d",&pos);
-    if(pos == 1){
-        newnode->next=start;
-        start=newnode;
+    scanf("%d", &pos);
+
+    // Count number of nodes
+    temp = start;
+    while (temp != NULL) {
+        count++;
+        temp = temp->next;
+    }
+
+    // Valid insertion positions are 1 to count+1
+    if (pos < 1 || pos > count + 1) {
+        printf("invalid position\n");
+        free(newnode);
         return;
     }
-    for(i=1;i<pos-1;i++){
-        temp=temp->next;
+
+    // Insert at beginning
+    if (pos == 1) {
+        newnode->next = start;
+        start = newnode;
+        return;
     }
-    newnode->next=temp->next;
-    temp->next=newnode;
+
+    // Move to node before the required position
+    temp = start;
+    for (i = 1; i < pos - 1; i++) {
+        temp = temp->next;
+    }
+
+    newnode->next = temp->next;
+    temp->next = newnode;
 }
-void del_at_Pos(){
-    struct Node *del,*delete;
-    del=start;
-    if(start==NULL){
+
+
+void del_at_Pos() {
+    struct Node *del, *delete;
+    int i, pos, count = 0;
+
+    if (start == NULL) {
         printf("empty\n");
         return;
     }
-    int i,pos;
+
     printf("enter the pos:\n");
-    scanf("%d",&pos);
-    for(i=1;i<pos-1;i++){
-        del=del->next;
+    scanf("%d", &pos);
+
+    // Count number of nodes
+    del = start;
+    while (del != NULL) {
+        count++;
+        del = del->next;
     }
-    delete=del->next;
-    del->next=delete->next;
+
+    // Valid deletion positions are 1 to count
+    if (pos < 1 || pos > count) {
+        printf("invalid position\n");
+        return;
+    }
+
+    // Delete first node
+    if (pos == 1) {
+        delete = start;
+        start = start->next;
+        free(delete);
+        return;
+    }
+
+    // Move to node before the one to delete
+    del = start;
+    for (i = 1; i < pos - 1; i++) {
+        del = del->next;
+    }
+
+    delete = del->next;
+    del->next = delete->next;
     free(delete);
 }
