@@ -37,7 +37,7 @@ int evaluatePostfix(char exp[]) {
     while (exp[i] != '\0') {
         ch = exp[i];
 
-        // If character is a digit, push its integer value to stack
+        // If character is a digit, push its INTEGER value to stack
         if (isdigit(ch)) {
             push(ch - '0'); // Converts char digit '5' to int 5
         }
