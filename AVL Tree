@@ -1,1 +1,21 @@
+before Right rotation
+      12
+     /
+    8
+   /
+  5
+after:
+      8
+     / \
+    5   12
 
+Before
+  5
+   \
+    8
+     \
+      12
+after:
+    8
+   / \
+  5   12
