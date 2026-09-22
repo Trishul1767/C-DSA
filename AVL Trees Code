@@ -16,3 +16,19 @@ struct Node {
 Why height?
 Because we need it to calculate:
   Balance Factor = height(left) - height(right)
+
+
+2. Get the height
+int height(struct Node *node)
+{
+    if (node == NULL)
+        return 0;
+
+    return node->height;
+}
+
+So:
+
+NULL → height 0
+
+And for a real node, we return its stored height.
