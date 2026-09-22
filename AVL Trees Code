@@ -19,6 +19,7 @@ Because we need it to calculate:
 
 
 2. Get the height
+
 int height(struct Node *node)
 {
     if (node == NULL)
