@@ -1,1 +1,18 @@
+1. Start with the node
 
+An AVL node needs:
+  data
+  pointer to left child
+  pointer to right child
+  height
+
+struct Node {
+    int data;
+    struct Node *left;
+    struct Node *right;
+    int height;
+};
+
+Why height?
+Because we need it to calculate:
+  Balance Factor = height(left) - height(right)
