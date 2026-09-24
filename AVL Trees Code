@@ -42,3 +42,14 @@ int max(int a, int b)
 }
 
 Create a new node
+struct Node* createNode(int data)
+{
+    struct Node *newNode = (struct Node*)malloc(sizeof(struct Node));
+
+    newNode->data = data;
+    newNode->left = NULL;
+    newNode->right = NULL;
+    newNode->height = 1;
+
+    return newNode;
+}
