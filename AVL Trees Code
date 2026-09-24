@@ -54,3 +54,13 @@ struct Node* createNode(int data)
 
     return newNode;
 }
+
+}
+
+Why height = 1?
+
+A newly created node has no children:
+
+    12
+
+Its own level counts as height 1 in this convention.
