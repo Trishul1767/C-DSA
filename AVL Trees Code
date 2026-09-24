@@ -35,3 +35,7 @@ And for a real node, we return its stored height.
 3. Maximum function
 
 When updating height, we'll need the larger of the two child heights.
+int max(int a, int b)
+{
+    return (a > b) ? a : b;
+}
