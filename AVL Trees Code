@@ -41,7 +41,8 @@ int max(int a, int b)
     return (a > b) ? a : b;
 }
 
-Create a new node
+4. Create a new node
+
 struct Node* createNode(int data)
 {
     struct Node *newNode = (struct Node*)malloc(sizeof(struct Node));
