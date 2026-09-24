@@ -31,3 +31,7 @@ int height(struct Node *node)
 So:
 NULL → height 0
 And for a real node, we return its stored height.
+
+3. Maximum function
+
+When updating height, we'll need the larger of the two child heights.
