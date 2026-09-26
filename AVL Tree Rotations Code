@@ -1,1 +1,52 @@
+Remember our cheat sheet:
 
+LL → RIGHT
+RR → LEFT
+
+LR → LEFT + RIGHT
+RL → RIGHT + LEFT
+
+We actually only need to write two rotation functions.
+
+Because LR and RL are combinations of these two.
+
+Right rotation
+
+Imagine:
+
+      y
+     /
+    x
+   /
+  T1
+
+Right rotation around y gives:
+
+      x
+     / \
+   T1   y
+
+Code:
+
+struct Node* rightRotate(struct Node *y)
+{
+    struct Node *x = y->left;
+    struct Node *T2 = x->right;
+
+    x->right = y;
+    y->left = T2;
+
+    return x;
+}
+
+Don't worry about memorizing it yet.
+
+Just understand these three lines:
+
+x = y->left;
+T2 = x->right;
+
+Then:
+
+x->right = y;
+y->left = T2;
