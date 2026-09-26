@@ -38,9 +38,6 @@ struct Node* rightRotate(struct Node *y)
 
     return x;
 }
-
-Don't worry about memorizing it yet.
-
 Just understand these three lines:
 
 x = y->left;
