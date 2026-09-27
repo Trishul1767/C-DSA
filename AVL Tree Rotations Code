@@ -48,4 +48,4 @@ Then:
 x->right = y;
 y->left = T2;
 
-6. Left rotation
+Left rotation
