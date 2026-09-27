@@ -78,3 +78,10 @@ struct Node* leftRotate(struct Node *x)
 }
 
 See the symmetry?
+RIGHT ROTATE              LEFT ROTATE
+
+x = y->left               y = x->right
+T2 = x->right             T2 = y->left
+
+x->right = y              y->left = x
+y->left = T2              x->right = T2
