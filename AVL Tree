@@ -1,1 +1,18 @@
 AVL insertion
+This is where everything you've learned comes together.
+
+First, insertion is basically normal BST insertion.
+
+struct Node* insert(struct Node *node, int data)
+{
+    if (node == NULL)
+        return createNode(data);
+
+    if (data < node->data)
+        node->left = insert(node->left, data);
+
+    else if (data > node->data)
+        node->right = insert(node->right, data);
+
+    else
+        return node;
