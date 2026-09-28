@@ -15,3 +15,9 @@ struct Node* insert(struct Node *node, int data)
 
     else
         return node;
+
+Upto here:
+
+Normal BST.
+
+Then we update height:
