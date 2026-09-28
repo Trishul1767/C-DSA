@@ -109,3 +109,12 @@ For example:
     8
    /
   5
+At 12:
+
+left height  = 2
+right height = 0
+
+BF = 2 - 0
+   = +2
+
+Unbalanced.
