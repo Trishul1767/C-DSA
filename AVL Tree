@@ -19,3 +19,5 @@ struct Node* insert(struct Node *node, int data)
 Upto here:
 Normal BST.
 Then we update height:
+    node->height = 1 + max(height(node->left),
+                            height(node->right));
