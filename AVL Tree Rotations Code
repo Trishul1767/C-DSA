@@ -97,3 +97,15 @@ int getBalance(struct Node *node)
 
     return height(node->left) - height(node->right);
 }
+
+So:
+
+BF = LEFT HEIGHT - RIGHT HEIGHT
+
+For example:
+
+      12
+     /
+    8
+   /
+  5
