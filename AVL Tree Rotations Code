@@ -85,3 +85,6 @@ T2 = x->right             T2 = y->left
 
 x->right = y              y->left = x
 y->left = T2              x->right = T2
+
+
+Balance factor
