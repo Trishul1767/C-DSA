@@ -88,3 +88,12 @@ y->left = T2              x->right = T2
 
 
 Balance factor
+Now:
+
+int getBalance(struct Node *node)
+{
+    if (node == NULL)
+        return 0;
+
+    return height(node->left) - height(node->right);
+}
