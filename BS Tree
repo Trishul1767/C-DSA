@@ -7,3 +7,11 @@ struct Node{
     struct Node* left;
     struct Node* right;
 };
+
+struct Node *createNode(int data){
+    struct Node *newnode =malloc(sizeof(struct Node));
+    newnode->data = data;
+    newnode->left = NULL;
+    newnode->right = NULL;
+    return newnode;
+}
