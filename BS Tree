@@ -30,3 +30,10 @@ struct Node *insert(struct Node *root,int data){
 }
 
 //Traversals
+void inorder(struct Node *root){
+    if(root!=NULL){
+        inorder(root->left);
+        printf("%d ",root->data);
+        inorder(root->right);
+    }   
+}
