@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 //BST
+
 struct Node{
     int data;
     struct Node* left;
