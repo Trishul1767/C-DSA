@@ -7,3 +7,5 @@ Algorithm:
 3. If equal → return index
 4. Otherwise move to next element
 5. If we reach the end → element doesn't exist
+
+Pseudocode:
