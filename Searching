@@ -9,3 +9,9 @@ Algorithm:
 5. If we reach the end → element doesn't exist
 
 Pseudocode:
+LinearSearch(A, n, target)
+for i = 0 to n-1
+    if A[i] == target
+        return i
+
+return -1
