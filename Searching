@@ -2,3 +2,8 @@ Linear Search 🔎:
 Start from the first element and compare every element with the target.
 
 Algorithm:
+1. Start from index 0
+2. Compare current element with target
+3. If equal → return index
+4. Otherwise move to next element
+5. If we reach the end → element doesn't exist
