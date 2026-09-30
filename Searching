@@ -17,8 +17,8 @@ for i = 0 to n-1
 return -1
 
 Now, the actual code:
-#include <stdio.h>
 
+#include <stdio.h>
 int linearSearch(int arr[], int n, int target)
 {
     for (int i = 0; i < n; i++)
@@ -28,7 +28,6 @@ int linearSearch(int arr[], int n, int target)
             return i;
         }
     }
-
     return -1;
 }
 
@@ -47,3 +46,11 @@ int main()
 
     return 0;
 }
+
+
+| Case    | Complexity |
+| ------- | ---------- |
+| Best    |   O(1)   |
+| Average |   O(n)   |
+| Worst   |   O(n)   |
+| Space   |   O(1)   |
