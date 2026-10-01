@@ -59,3 +59,24 @@ int main()
 Binary Search
 
 it repeatedly cuts the search area in half.
+
+Algo:
+BinarySearch(A, n, key)
+
+1. Start
+2. Set low = 0
+3. Set high = n - 1
+4. While low <= high:
+      mid = (low + high) / 2
+
+      If A[mid] == key:
+          Return mid
+
+      Else if A[mid] < key:
+          low = mid + 1
+
+      Else:
+          high = mid - 1
+
+5. Return -1
+6. Stop
