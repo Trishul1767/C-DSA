@@ -54,3 +54,6 @@ int main()
 | Average |   O(n)   |
 | Worst   |   O(n)   |
 | Space   |   O(1)   |
+
+
+Binary Search
