@@ -57,3 +57,5 @@ int main()
 
 
 Binary Search
+
+it repeatedly cuts the search area in half.
