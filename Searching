@@ -122,3 +122,9 @@ int main()
 
     return 0;
 }
+
+Complexity:
+Best: O(1)
+Average: O(log n)
+Worst: O(log n)
+Space: O(1)
