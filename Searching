@@ -80,3 +80,45 @@ BinarySearch(A, n, key)
 
 5. Return -1
 6. Stop
+
+
+Code:
+#include <stdio.h>
+
+int binarySearch(int A[], int n, int key)
+{
+    int low = 0;
+    int high = n - 1;
+
+    while (low <= high)
+    {
+        int mid = (low + high) / 2;
+
+        if (A[mid] == key)
+            return mid;
+
+        else if (A[mid] < key)
+            low = mid + 1;
+
+        else
+            high = mid - 1;
+    }
+
+    return -1;
+}
+
+int main()
+{
+    int A[] = {10, 20, 30, 40, 50, 60, 70};
+    int n = 7;
+    int key = 60;
+
+    int result = binarySearch(A, n, key);
+
+    if (result != -1)
+        printf("Element found at index %d", result);
+    else
+        printf("Element not found");
+
+    return 0;
+}
