@@ -160,3 +160,9 @@ For:
 A = [10, 20, 30]
 Index:     0   1   2
 Position:  1   2   3
+
+If 30 is found, its:
+index = 2
+position = 3
+
+Don't mix them up.
