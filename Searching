@@ -157,3 +157,4 @@ to indicate "not found".
 Array index vs position
 
 For:
+A = [10, 20, 30]
