@@ -158,3 +158,5 @@ Array index vs position
 
 For:
 A = [10, 20, 30]
+Index:     0   1   2
+Position:  1   2   3
