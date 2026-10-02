@@ -130,6 +130,8 @@ Worst: O(log n)
 Space: O(1)
 
 
+Linear search:
+
 Works on sorted or unsorted arrays.
 Checks elements one by one.
 Start from index 0.
