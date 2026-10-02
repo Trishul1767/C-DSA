@@ -128,3 +128,30 @@ Best: O(1)
 Average: O(log n)
 Worst: O(log n)
 Space: O(1)
+
+
+Works on sorted or unsorted arrays.
+Checks elements one by one.
+Start from index 0.
+
+Loop condition is usually:
+
+i < n
+
+Compare:
+
+A[i] == key
+If found → return/print the index.
+If the loop finishes → element is not found.
+
+Commonly return:
+
+-1
+
+to indicate "not found".
+
+⚠️ Watch out for
+
+Array index vs position
+
+For:
