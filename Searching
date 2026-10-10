@@ -61,7 +61,7 @@ Binary Search
 it repeatedly cuts the search area in half.
 
 Algo:
-BinarySearch(A, n, key)
+BinarySearch(A, n, key) A is an array
 
 1. Start
 2. Set low = 0
