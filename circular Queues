@@ -60,7 +60,7 @@ void display()
 
     if (f == -1)
     {
-        printf("Empty\n");
+        printf("The Queue Is Empty\n");
         return;
     }
 
