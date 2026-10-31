@@ -1,9 +1,10 @@
 insortion sort
+
 Take one element as sorted and from the next one compare it with the previous ones 
 if previous one greater then move that to the right.
 else place it in the empty place
-#include <stdio.h>
 
+#include <stdio.h>
 int main()
 {
     int a[] = {5, 3, 4, 1, 2};
