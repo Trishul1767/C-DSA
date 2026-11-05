@@ -34,7 +34,6 @@ int main()
 merge sort
 
 #include <stdio.h>
-
 void merge(int a[], int l, int m, int r, int temp[])
 {
     int i = l;
