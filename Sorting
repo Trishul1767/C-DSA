@@ -95,7 +95,6 @@ int main()
 
 
 quick sort
-\
 
 int partition(int arr[], int low, int high)
 {
