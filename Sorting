@@ -96,7 +96,7 @@ int main()
 
 quick sort
 
-partion funtion
+partition funtion
 int partition(int arr[], int low, int high)
 {
     int pivot = arr[high];
