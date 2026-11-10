@@ -60,7 +60,7 @@ Binary Search
 
 It repeatedly cuts the search area in half.
 
-Algo:
+Algorithm:
 BinarySearch(A, n, key) A is an array
 
 1. Start
