@@ -58,7 +58,7 @@ int main()
 
 Binary Search
 
-it repeatedly cuts the search area in half.
+It repeatedly cuts the search area in half.
 
 Algo:
 BinarySearch(A, n, key) A is an array
