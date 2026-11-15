@@ -54,7 +54,6 @@ void postorder(struct Node *root) {
 }
 
 int main() {
-
     struct Node *root = createNode(1);
 
     root->left = createNode(2);
@@ -68,7 +67,7 @@ int main() {
 
     printf("Inorder: ");
     inorder(root);
-
+//
     printf("\nPreorder: ");
     preorder(root);
 
