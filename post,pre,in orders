@@ -67,7 +67,7 @@ int main() {
 
     printf("Inorder: ");
     inorder(root);
-//
+// for pre order
     printf("\nPreorder: ");
     preorder(root);
 
