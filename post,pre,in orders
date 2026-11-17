@@ -90,3 +90,18 @@ struct Node* findMin(struct Node *root) {
 
     return root;
 }
+
+
+struct Node* findMax(struct Node *root) {
+
+    if (root == NULL) {
+        return NULL;
+    }
+
+    while (root->right != NULL) {
+        root = root->right;
+    }
+
+    return root;
+}
+
