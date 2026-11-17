@@ -76,3 +76,17 @@ int main() {
     return 0;
 }
 
+
+
+struct Node* findMin(struct Node *root) {
+
+    if (root == NULL) {
+        return NULL;
+    }
+
+    while (root->left != NULL) {
+        root = root->left;
+    }
+
+    return root;
+}
